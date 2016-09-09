@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_CALL);
+                intent.setAction(Intent.ACTION_DIAL);
+                intent.addCategory("android.intent.category.DEFAULT");
                 intent.setData(Uri.parse("tel:911"));
                 startActivity(intent);
             }
